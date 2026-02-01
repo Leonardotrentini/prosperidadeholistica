@@ -171,6 +171,26 @@
             border-radius: 8px;
             object-fit: cover;
         }
+        /* Ocultar elementos do YouTube que aparecem sobre o vídeo */
+        .video-wrapper {
+            overflow: hidden;
+        }
+        /* Overlay para ocultar informações do canal no topo */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: var(--primary-teal);
+            z-index: 10;
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            .video-overlay {
+                height: 100px;
+            }
+        }
 
         /* --- SEÇÕES GERAIS --- */
         .section-white { padding: 40px 0; background-color: #fff; }
@@ -366,9 +386,10 @@
             </p>
 
             <div class="video-wrapper">
+                <div class="video-overlay"></div>
                 <iframe 
                     id="vsl-video"
-                    src="https://www.youtube.com/embed/dAmCrQ0vJZI?autoplay=1&mute=0&controls=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&enablejsapi=1" 
+                    src="https://www.youtube-nocookie.com/embed/dAmCrQ0vJZI?autoplay=1&mute=0&controls=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&enablejsapi=1&playsinline=1&cc_load_policy=0&fs=1&disablekb=0&loop=0" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen

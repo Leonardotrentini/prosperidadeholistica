@@ -55,24 +55,37 @@ vercel --prod
 
 ## ⚠️ Importante: Vídeo VSL
 
-O vídeo `videos/VSL.mp4` (316MB) pode causar problemas:
+O vídeo `videos/VSL.mp4` (316MB) **NÃO está no GitHub** (excede limite de 100MB).
 
-### Opções:
+### ✅ Solução: Upload Direto na Vercel
 
-1. **Manter Local (Funciona na Vercel):**
-   - O vídeo será servido pela Vercel
-   - Pode demorar para carregar (316MB é grande)
-   - Funciona, mas não é ideal
+**Opção 1: Upload via Vercel Dashboard (Recomendado)**
+1. Após fazer deploy, vá em **Settings** > **Storage**
+2. Faça upload do vídeo `VSL.mp4` na pasta `videos/`
+3. O vídeo ficará disponível em: `https://seu-dominio.vercel.app/videos/VSL.mp4`
 
-2. **Usar YouTube/Vimeo (Recomendado):**
-   - Faça upload no YouTube
-   - Substitua o `<video>` por `<iframe>` no HTML
-   - Muito mais rápido e confiável
+**Opção 2: Upload via Vercel CLI**
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
 
-3. **CDN de Vídeo:**
-   - Cloudflare Stream
-   - Bunny.net
-   - Mux
+# Fazer upload do vídeo
+vercel --prod videos/VSL.mp4
+```
+
+**Opção 3: Usar YouTube/Vimeo (Mais Rápido)**
+1. Faça upload no YouTube (privado ou não listado)
+2. Substitua no `index.html`:
+   ```html
+   <!-- De: -->
+   <video controls autoplay muted>
+       <source src="videos/VSL.mp4" type="video/mp4">
+   </video>
+   
+   <!-- Para: -->
+   <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+   ```
+3. Muito mais rápido e confiável!
 
 ## 🔧 Configurações Aplicadas
 

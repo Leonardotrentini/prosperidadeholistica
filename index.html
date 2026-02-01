@@ -367,13 +367,38 @@
 
             <div class="video-wrapper">
                 <iframe 
-                    src="https://www.youtube.com/embed/dAmCrQ0vJZI?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3" 
+                    id="vsl-video"
+                    src="https://www.youtube.com/embed/dAmCrQ0vJZI?autoplay=1&mute=0&controls=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&enablejsapi=1" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen
                     title="VSL - Formación Prosperidad Holística">
                 </iframe>
             </div>
+            <script>
+                // Tentar aumentar volume ao máximo quando o vídeo carregar
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('vsl-video', {
+                        events: {
+                            'onReady': function(event) {
+                                // Tentar aumentar volume ao máximo
+                                try {
+                                    event.target.setVolume(100);
+                                    event.target.unMute();
+                                } catch(e) {
+                                    console.log('Não foi possível ajustar volume:', e);
+                                }
+                            }
+                        }
+                    });
+                }
+            </script>
 
             <a href="#oferta" class="btn-cta">¡QUIERO LA FORMACIÓN!</a>
             <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">🔒 Compra 100% Segura | Acceso Inmediato</p>

@@ -1,0 +1,15 @@
+{
+  "name": "prosperidade-holistica",
+  "version": "1.0.0",
+  "description": "Landing page otimizada para Formación Prosperidad Holística",
+  "scripts": {
+    "build": "echo 'No build step needed'"
+  },
+  "keywords": [
+    "landing-page",
+    "vendas",
+    "otimizado"
+  ],
+  "author": "",
+  "license": "MIT"
+}

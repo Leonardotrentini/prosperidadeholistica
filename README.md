@@ -84,10 +84,19 @@ prosperidade-holistica/
 
 ## 📝 Notas Importantes
 
-1. **Vídeos grandes**: GitHub tem limite de 100MB por arquivo. Se o VSL for maior, considere:
-   - Usar YouTube/Vimeo (embed)
-   - Comprimir o vídeo
-   - Usar CDN alternativo (Cloudflare, etc)
+1. **Vídeo VSL**: O vídeo não está no repositório (excede 100MB do GitHub). Opções:
+   - **YouTube/Vimeo** (recomendado): Faça upload e use embed
+   - **CDN**: Use Cloudflare, Bunny.net ou similar
+   - **GitHub LFS**: Instale Git LFS e faça upload do vídeo
+   - **Local**: Mantenha o vídeo localmente e atualize o caminho no HTML
+
+   **Para usar YouTube:**
+   ```html
+   <!-- Substitua o <video> por: -->
+   <div class="video-wrapper">
+       <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+   </div>
+   ```
 
 2. **Imagens**: Otimize antes de fazer upload:
    - Use ferramentas como [TinyPNG](https://tinypng.com)

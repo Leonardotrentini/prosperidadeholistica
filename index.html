@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Formación Prosperidad Holística - Conviértete en Doctora del Alma con 5 certificados profesionales">
+    <meta name="theme-color" content="#0A4240">
+    <title>Formación Prosperidad Holística | Doctora del Alma</title>
+    
+    <!-- DNS Prefetch e Preconnect - Performance Critical -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://i.pravatar.cc">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" href="imagens/LOGO-FORMACAO.png" as="image" type="image/png">
+    
+    <!-- Fontes otimizadas - carregamento assíncrono -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Font Awesome - carregamento assíncrono -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Meta Pixel Code - Defer para não bloquear renderização -->
+    <script defer>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1436213764821704');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1436213764821704&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        /* --- CORES DA MARCA --- */
+        :root {
+            --primary-teal: #0A4240;
+            --primary-gold: #C5A059;
+            --light-gold: #F4ECD9;
+            --text-dark: #1A1A1A;
+            --text-light: #FFFFFF;
+            --alert-red: #D9534F;
+        }
+
+        /* --- RESET GERAL --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: #FAFAFA;
+            line-height: 1.6;
+        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block;
+        }
+
+        /* --- UTILITÁRIOS --- */
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .highlight { color: var(--primary-gold); font-style: italic; }
+        .bold { font-weight: 700; }
+        
+        /* Performance - Otimizações */
+        .btn-cta { will-change: transform; }
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        
+        /* --- BOTÃO CTA --- */
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(180deg, #D4AF37 0%, #AA8C2C 100%);
+            color: white;
+            padding: 18px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+            transition: transform 0.2s;
+            border: 2px solid #FFF;
+            animation: pulse 2s infinite;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            touch-action: manipulation;
+        }
+        .btn-cta:hover, .btn-cta:active { transform: scale(1.05); }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+        }
+        /* Reduzir animações em dispositivos com preferência reduzida */
+        @media (prefers-reduced-motion: reduce) {
+            .btn-cta { animation: none; }
+            * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+        }
+
+        /* --- HERO SECTION --- */
+        header {
+            background-color: var(--primary-teal);
+            color: var(--text-light);
+            padding: 40px 0 60px;
+            text-align: center;
+        }
+        .logo-area { 
+            width: 180px; 
+            max-width: 90%;
+            margin: 0 auto 20px; 
+        }
+        .logo-area img {
+            width: 100%;
+            height: auto;
+        }
+        .headline {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-weight: 700;
+            padding: 0 10px;
+        }
+        .headline span { color: var(--primary-gold); }
+        .subheadline {
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+        
+        /* VSL WRAPPER */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid var(--primary-gold);
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* --- SEÇÕES GERAIS --- */
+        .section-white { padding: 40px 0; background-color: #fff; }
+        .section-title {
+            font-size: 1.6rem;
+            color: var(--primary-teal);
+            margin-bottom: 25px;
+            text-align: center;
+            padding: 0 15px;
+            line-height: 1.3;
+        }
+        .feature-box {
+            margin-bottom: 25px;
+            padding: 18px;
+            border-left: 4px solid var(--primary-gold);
+            background: #FAFAFA;
+        }
+        .feature-title { 
+            color: var(--primary-teal); 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            margin-bottom: 10px; 
+        }
+
+        /* --- SEÇÃO 3: NOVA VIDA (Escuro) --- */
+        .section-dark {
+            background-color: var(--primary-teal);
+            color: var(--text-light);
+            padding: 40px 0;
+        }
+        .section-dark .section-title { color: var(--primary-gold); }
+        .benefit-list { 
+            list-style: none; 
+            padding: 0 10px;
+        }
+        .benefit-list li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .benefit-list i {
+            color: var(--primary-gold);
+            margin-right: 12px;
+            margin-top: 3px;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .benefit-list div {
+            flex: 1;
+        }
+
+        /* --- SEÇÃO 4: PROVA SOCIAL (ATUALIZADA COM FOTOS) --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .testimonial-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .profile-pic {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 12px;
+            border: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+            aspect-ratio: 1/1;
+        }
+        .author-info { display: flex; flex-direction: column; }
+        .author-name { font-weight: 700; color: var(--primary-teal); font-size: 1rem; }
+        .author-tag { font-size: 0.85rem; color: #777; }
+        .quote-text { font-style: italic; font-size: 0.95rem; color: #555; position: relative; }
+        .quote-text::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--light-gold); position: absolute; top: -20px; left: -10px; z-index: -1; }
+
+
+        /* --- SEÇÃO 5: ARSENAL --- */
+        .arsenal-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .arsenal-item {
+            background: var(--light-gold);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .arsenal-item h4 { color: var(--primary-teal); margin-bottom: 5px; font-weight: 700; }
+        .arsenal-item p { font-size: 0.9rem; }
+
+        /* --- SEÇÃO 6: CERTIFICADOS --- */
+        .cert-section { text-align: center; background: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
+
+        /* --- SEÇÃO 7: OFERTA (CARD) - FUNDO BRANCO ATUALIZADO --- */
+        /* MUDANÇA AQUI: Background agora é white */
+        .offer-section { padding: 60px 0; background: #ffffff; }
+        .offer-card {
+            background: #fff;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15); /* Sombra mais forte para destacar no fundo branco */
+            border: 2px solid var(--primary-gold);
+            position: relative;
+        }
+        .scarcity-bar {
+            background: var(--alert-red);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .offer-body { padding: 25px 20px; text-align: center; }
+        .old-price { text-decoration: line-through; color: #777; font-size: 1rem; }
+        .new-price { font-size: 2.8rem; color: var(--primary-teal); font-weight: 700; line-height: 1; margin: 10px 0; }
+        .price-details { color: var(--primary-teal); font-weight: 600; margin-bottom: 20px; }
+        .offer-list { text-align: left; margin: 20px 0 30px; }
+        .offer-list li { margin-bottom: 10px; border-bottom: 1px dashed #ddd; padding-bottom: 10px; }
+        .offer-list i { color: var(--primary-teal); margin-right: 10px; }
+
+        /* --- FOOTER --- */
+        footer { background: #111; color: #777; padding: 30px 0; text-align: center; font-size: 0.8rem; }
+
+        /* MOBILE FIRST - Otimizações Mobile */
+        @media (max-width: 480px) {
+            .container { padding: 0 15px; }
+            header { padding: 30px 0 40px; }
+            .headline { font-size: 1.5rem; }
+            .headline span { font-size: 1.2rem !important; }
+            .subheadline { font-size: 0.95rem; }
+            .section-white, .section-dark { padding: 35px 0; }
+            .section-title { font-size: 1.4rem; }
+            .btn-cta { padding: 16px 30px; font-size: 1rem; }
+            .new-price { font-size: 2.2rem; }
+            .offer-body { padding: 20px 15px; }
+            .testimonial-card { padding: 18px; }
+            .profile-pic { width: 50px; height: 50px; }
+        }
+        
+        /* TABLET */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .headline { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+        
+        /* DESKTOP */
+        @media (min-width: 768px) {
+            .testimonial-grid { grid-template-columns: 1fr 1fr; }
+            .arsenal-grid { grid-template-columns: repeat(3, 1fr); }
+            .headline { font-size: 3rem; }
+            .section-white, .section-dark { padding: 60px 0; }
+            .section-title { font-size: 2rem; }
+            .new-price { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-area">
+               <img src="imagens/LOGO-FORMACAO.png" 
+                    alt="Logo Formación Prosperidad Holística" 
+                    loading="eager"
+                    fetchpriority="high"
+                    width="180"
+                    height="180"
+                    style="border-radius: 50%; border: 2px solid var(--primary-gold);">
+            </div>
+
+            <h1 class="headline">
+                Cargas una <span style="color: #D9534F;">MALDICIÓN</span> silenciosa que está robando tu vida<br>
+                <span style="font-size: 1.5rem; color: #fff; font-weight: 300;">(y siempre creíste que era solo "buen corazón")</span>
+            </h1>
+
+            <p class="subheadline">
+                Mira el video a continuación para descubrir cómo <strong>transmutar esta carga</strong> en tu mayor herramienta de riqueza y ser finalmente respetada por quienes amas.
+            </p>
+
+            <div class="video-wrapper">
+                <video controls autoplay muted preload="none" playsinline>
+                    <source src="videos/VSL.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+
+            <a href="#oferta" class="btn-cta">¡QUIERO LA FORMACIÓN!</a>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">🔒 Compra 100% Segura | Acceso Inmediato</p>
+        </div>
+    </header>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="section-title">La Transmutación del Don: <br>El Fin del Amateurismo</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">
+                La <strong>Formación Prosperidad Holística</strong> es el método que organiza el caos que sientes hoy. Transmutará tu don de ser una carga pesada, que hoy te enferma, a una herramienta de libertad y prestigio.
+            </p>
+
+            <div class="feature-box">
+                <div class="feature-title">De "Ayudante Invisible" a Doctora del Alma</div>
+                <p>Dejas de ser solo la persona que "da consejos" para ser la autoridad que resuelve traumas y limpia energías con precisión técnica.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-title">El Arsenal Profesional</div>
+                <p>El camino completo para especializarte en las <strong>5 terapias principales</strong> que generan alivio inmediato. Es este impacto rápido lo que hace que la gente te pague con gusto y te recomiende.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-title">La Prueba de Fuego</div>
+                <p>Un método diseñado para quien no tiene tiempo que perder. Con resultados visibles, no solo ganarás dinero; callarás las críticas y el juicio de tu familia probando, en la práctica, el poder que siempre estuvo en tus manos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container">
+            <h2 class="section-title text-center">La Vida Después de la Maldición: <br>Tu Nuevo Mañana</h2>
+            <p class="text-center" style="margin-bottom: 40px;">¿Conoces ese peso en el pecho y el zumbido de ansiedad? Dan lugar a una realidad donde eres dueña de tu destino.</p>
+
+            <ul class="benefit-list">
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong class="highlight">Tu Bendición ahora es Remunerada:</strong> Dejas de dar energía gratis. Tu don se convierte en un servicio de élite, pagado con gratitud y dignidad.
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <strong class="highlight">Del Silencio a la Admiración:</strong> Con tus certificados en la pared, la sonrisa irónica de tu familia desaparece y da lugar al respeto.
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <strong class="highlight">Tu Mesa, Tus Reglas:</strong> Conquistas tu independencia atendiendo desde tu propia mesa de comedor, decidiendo tus horarios y el valor de tu tiempo.
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-wallet"></i>
+                    <div>
+                        <strong class="highlight">El Fin del "¿Puedo?":</strong> Cuando aparezcan los resultados, nunca más necesitarás pedir permiso para gastar tu propio dinero.
+                    </div>
+                </li>
+                <li>
+                     <i class="fas fa-star"></i>
+                    <div>
+                        <strong class="highlight">El Encuentro con tu Destino:</strong> Sientes que finalmente encontraste el camino, uniendo tu don natural a un método que te protege y te prospera.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen otras mujeres</h2>
+            <div class="testimonial-grid">
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/150?img=45" alt="Foto de Mariana R." class="profile-pic" loading="lazy" width="55" height="55" decoding="async">
+                        <div class="author-info">
+                            <span class="author-name">Mariana R.</span>
+                            <span class="author-tag">Madre de 2, superó la falta de tiempo</span>
+                        </div>
+                    </div>
+                    <p class="quote-text">"Creí que nunca terminaría por mi rutina con mis hijos y mi mamá. Pero las clases son tan directas que las escuchaba mientras ordenaba la cocina. No necesité tecnología difícil, solo mi celular y WhatsApp."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                         <img src="https://i.pravatar.cc/150?img=47" alt="Foto de Elena G." class="profile-pic" loading="lazy" width="55" height="55" decoding="async">
+                        <div class="author-info">
+                            <span class="author-name">Elena G.</span>
+                            <span class="author-tag">Calló el juicio familiar</span>
+                        </div>
+                    </div>
+                    <p class="quote-text">"Tenía vergüenza de decir que estudiaba esto. Pero cuando puse mis <strong>5 certificados</strong> en la pared, hasta mi esposo cambió el tono. Ahora me respeta como la Doctora del Alma de la familia."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                         <img src="https://i.pravatar.cc/150?img=10" alt="Foto de Camila S." class="profile-pic" loading="lazy" width="55" height="55" decoding="async">
+                        <div class="author-info">
+                            <span class="author-name">Camila S.</span>
+                            <span class="author-tag">Generó $200 en su 1ª sesión</span>
+                        </div>
+                    </div>
+                    <p class="quote-text">"Siempre pensé que 'el don no se cobra'. La formación me abrió los ojos. En la primera sesión de Mesa Radiónica, la clienta me pagó feliz. Fue la primera vez que sentí la dignidad de tener mi propio dinero."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                         <img src="https://i.pravatar.cc/150?img=36" alt="Foto de Valentina P." class="profile-pic" loading="lazy" width="55" height="55" decoding="async">
+                        <div class="author-info">
+                            <span class="author-name">Valentina P.</span>
+                            <span class="author-tag">Alumna de la Formación</span>
+                        </div>
+                    </div>
+                    <p class="quote-text">"Compré desconfiada porque costaba solo $12 dólares. ¡Pero me sorprendí! Es más completo que posgrados caros. El mapa para conseguir clientes es lo que nadie te cuenta."</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white" style="background-color: #FAFAFA;">
+        <div class="container">
+            <h2 class="section-title">Tu Arsenal Profesional:<br>Simple, Práctico y Completo</h2>
+            <p class="text-center">No estás comprando un "cursito de internet". Recibes un paso a paso para la vida real, accesible tengas 35 o 60 años.</p>
+
+            <div class="arsenal-grid">
+                <div class="arsenal-item">
+                    <h4>Reiki Profesional</h4>
+                    <p>Usa tus manos para calmar el dolor y proteger tu propia energía.</p>
+                </div>
+                <div class="arsenal-item">
+                    <h4>Tarot Terapéutico</h4>
+                    <p>Diagnóstico visual para ver qué traba la vida de las personas.</p>
+                </div>
+                <div class="arsenal-item">
+                    <h4>Mesa Radiónica</h4>
+                    <p>Tu herramienta de "limpieza energética" para abrir caminos financieros.</p>
+                </div>
+                <div class="arsenal-item">
+                    <h4>Aromaterapia</h4>
+                    <p>Usa el poder de las plantas para apagar la ansiedad en minutos.</p>
+                </div>
+                <div class="arsenal-item">
+                    <h4>Mindfulness</h4>
+                    <p>Técnicas de respiración para mantener la paz en medio del caos.</p>
+                </div>
+                <div class="arsenal-item" style="background-color: var(--primary-teal); color: white;">
+                    <h4 style="color: var(--primary-gold);">Mapa de Monetización</h4>
+                    <p>La guía exacta para conseguir clientes sin usar redes sociales.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 20px; border: 1px dashed var(--primary-teal); border-radius: 10px;">
+                <h3 class="text-center" style="color: var(--primary-teal); margin-bottom: 15px;">Del Cero Absoluto al Primer Atendimiento</h3>
+                <p>Te llevo de la mano: <strong>Preparación</strong> (preparar tu mesa), <strong>Atendimiento</strong> (qué decir) y <strong>Finalización</strong> (cómo fidelizar). Sin tecnologías difíciles, a tu propio ritmo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cert-section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">Tu Escudo de Autoridad</h2>
+            <p style="max-width: 700px; margin: 0 auto 30px;">
+                No es solo un papel. Es el fin de las dudas. Al colocar estos 5 certificados en tu pared, callas el juicio y te posicionas como una especialista. <br><br>
+                <strong>Recupera tu nombre y tu lugar en la sociedad.</strong>
+            </p>
+            <div style="max-width: 800px; margin: 40px auto 0; text-align: center;">
+                <img src="imagens/CERTIFICADO.png" 
+                     alt="Certificado Profesional" 
+                     loading="lazy"
+                     decoding="async"
+                     style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="offer-section">
+        <div class="container">
+            <div class="offer-card">
+                <div class="scarcity-bar">🔥 Cupos Limitados para esta generación</div>
+                <div class="offer-body">
+                    <h3 style="font-family: 'Montserrat'; text-transform: uppercase; letter-spacing: 1px; color: #555;">Formación Completa</h3>
+                    <h2 style="font-family: 'Playfair Display'; color: var(--primary-teal); font-size: 1.8rem; margin: 10px 0;">DOCTORA DEL ALMA</h2>
+                    
+                    <div class="old-price">De $197 USD</div>
+                    <div class="new-price">$12 USD</div>
+                    <div class="price-details">Pago Único | Acceso De Por Vida</div>
+
+                    <ul class="offer-list">
+                        <li><i class="fas fa-check"></i> <strong>Las 5 Llaves de Cura:</strong> Reiki, Tarot, Mesa, Aromaterapia, Mindfulness.</li>
+                        <li><i class="fas fa-check"></i> <strong>5 Certificados Profesionales:</strong> Tu escudo contra críticas.</li>
+                        <li><i class="fas fa-check"></i> <strong>Mapa de Monetización:</strong> Factura desde tu comedor.</li>
+                        <li><i class="fas fa-check"></i> <strong>Soporte Completo:</strong> Nunca estarás sola.</li>
+                    </ul>
+
+                    <a href="https://pay.hotmart.com/F104204573V" class="btn-cta" target="_blank" rel="noopener noreferrer">¡QUIERO MI CUPO AHORA!</a>
+                    <p style="font-size: 0.8rem; margin-top: 15px; color: #888;">*Quedan pocos lugares con valor promocional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Formación Prosperidad Holística &copy; 2024 - Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.7rem;">Este sitio no es parte de Facebook o Facebook Inc. Además, este sitio no está respaldado por Facebook de ninguna manera.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

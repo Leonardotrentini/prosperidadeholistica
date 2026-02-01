@@ -1,0 +1,16 @@
+# Servidor local
+server.js
+
+# Vídeos grandes (usar CDN externo)
+videos/*.mp4
+videos/*.mov
+videos/*.avi
+
+# Arquivos temporários
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
